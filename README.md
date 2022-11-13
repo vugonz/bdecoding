@@ -1,0 +1,1 @@
+A little bencoding script, requires a lot of optimization, generators might not even be necessary since no .torrent file will ever be THAT big
