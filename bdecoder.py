@@ -5,6 +5,8 @@ TOKEN_NEG = b"-"
 TOKEN_SEP = b":"
 TOKEN_END = b"e"
 
+url = "a .torrent file"
+
 def decode_int(a):
     """ Decode int in format i<content>e """
     a.consume_token() # i token
@@ -84,9 +86,6 @@ class Decode:
     
     def consume_token(self):
         self.f_handler.seek(1, 1)
-    
-    def return_one(self):
-        self.f_handler.seek(-1, 1)
     
     def read_byte(self, chunks=1) -> bytes:
         """ Generator for bytes in .torrent file """
